@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Use node
         env:
-          DEPLOYER_PRIVATE_KEY:
+          DEPLOYER_PRIVATE_KEY: ${{ secrets.DEPLOYER_PRIVATE_KEY }}
         uses: actions/setup-node@v4
         with:
           node-version: 22
